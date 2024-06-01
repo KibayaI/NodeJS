@@ -21,6 +21,7 @@ const fourth_temp = document.querySelector("#four");
 const img_four = document.querySelector("#img_four");
 const day_four = document.querySelector("#day_four");
 
+//initial default api call for Nyahururu
 populate();
 
 input.addEventListener("keypress", function (event) {
