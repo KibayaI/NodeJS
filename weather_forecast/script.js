@@ -73,7 +73,6 @@ async function populate() {
     description.textContent = weather_output[0].weather[0].description;
 
     //predictions weather
-
     day_one.textContent = getDays(new Date(weather_output[1].dt_txt).getDay());
     day_two.textContent = getDays(new Date(weather_output[2].dt_txt).getDay());
     day_three.textContent = getDays(
@@ -93,6 +92,7 @@ async function populate() {
     img_three.src = `./img/${img4}.png`;
     img_four.src = `./img/${img5}.png`;
 
+    //gets the name of the day of the week
     function getDays(index) {
       if (index === 0) {
         return "Sunday";
