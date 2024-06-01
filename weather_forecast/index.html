@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kibaya Muhia" />
+    <meta
+      name="description"
+      content="Just a weather app getting the data from an API"
+    />
+    <title>Weather Forecast App</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <!-- 0e15ab4d22bafa851154886cd30a7403 -->
+  <body>
+    <input type="text" name="city" id="city" value="nyahururu" placeholder="Enter a city..." />
+    <div class="container">
+      <div class="today">
+        <div class="image">
+          <img id="img_today"alt="" />
+        </div>
+        <div class="description">
+          <p class="day">Today</p>
+          <p class="place"></p>
+          <p>Temperature: <span class="temp"></span></p>
+          <p class="status"></p>
+        </div>
+      </div>
+      <div class="future">
+        <div class="next">
+          <p class="day" id="day_one"></p>
+          <p><img id="img_one" alt="" /></p>
+          <p class="temp" id="one"></p>
+        </div>
+        <div class="next">
+          <p class="day" id="day_two"></p>
+          <p><img  id="img_two" alt="" /></p>
+          <p class="temp" id="two"></p>
+        </div>
+        <div class="next">
+          <p class="day" id="day_three"></p>
+          <p><img id="img_three" alt="" /></p>
+          <p class="temp" id="three"></p>
+        </div>
+        <div class="next">
+          <p class="day" id="day_four"></p>
+          <p><img id="img_four" alt="" /></p>
+          <p class="temp" id="four"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

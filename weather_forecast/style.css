@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  background: url("./img/clouds_bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+#city {
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  width: 25rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  width: 50rem;
+  height: 20rem;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0px 0px 10px #333;
+  background-color: #ffffff85;
+}
+
+.today {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 100px;
+  top: 40px;
+}
+
+#img_today {
+  width: 255px;
+  height: 255px;
+}
+
+.temp {
+  margin-bottom: 0.5rem;
+}
+
+.status {
+  margin-top: 0;
+}
+
+.future {
+  width: 40rem;
+  position: absolute;
+  bottom: -5rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.next {
+  width: 170px;
+  box-shadow: 0px 0px 10px #333;
+  border-radius: 40px;
+  text-align: center;
+  padding: 0.2rem 1rem;
+  background-color: #ffffff85;
+}
+
+.next p {
+  margin: 0;
+}
+
+.next img {
+  width: 140px;
+  height: 120px;
+}
+
+p {
+  margin: 1rem;
+}
+
+.day {
+  font-weight: 600;
+}
+
+.next .day {
+  font-size: 24px;
+}
+
+.place {
+  font-size: 40px;
+  font-weight: 800;
+}
