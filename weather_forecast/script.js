@@ -30,7 +30,7 @@ input.addEventListener("keypress", function (event) {
   }
 });
 img_today.addEventListener("click", function (event) {
-  theirs();
+  useOpenWeatherIcons();
 });
 
 async function populate() {
@@ -65,7 +65,7 @@ async function populate() {
     }
     const weather_output = getHour();
     const deg = "\u{00B0}";
-
+    console.log(weather_output);
     //Today's weather
     city_today.textContent = response.city.name;
     temp_today.textContent = `${(
@@ -114,16 +114,16 @@ async function populate() {
 
     //predictions for the next four days
     first_temp.textContent = `${(
-      weather_output[0].main.temp - 273
-    ).toFixed()}${deg}`;
-    second_temp.textContent = `${(
       weather_output[1].main.temp - 273
     ).toFixed()}${deg}`;
-    third_temp.textContent = `${(
+    second_temp.textContent = `${(
       weather_output[2].main.temp - 273
     ).toFixed()}${deg}`;
-    fourth_temp.textContent = `${(
+    third_temp.textContent = `${(
       weather_output[3].main.temp - 273
+    ).toFixed()}${deg}`;
+    fourth_temp.textContent = `${(
+      weather_output[4].main.temp - 273
     ).toFixed()}${deg}`;
   } catch (err) {
     alert("Please check your internet connection\n" + err);
