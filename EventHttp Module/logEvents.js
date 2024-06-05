@@ -4,16 +4,14 @@ const path = require("path");
 const fsPromise = require("fs").promises;
 const fs = require("fs");
 
-exports
-
-async function logEvents() {
+async function logEvents(message) {
   try {
     const new_uuid = uuidv4();
     const new_date = format(new Date(), "yyyy-MM-dd HH:mm:ss");
     const logItem = {
       id: new_uuid,
       date: new_date,
-      message: "This is the first message",
+      message: message,
     };
     if (!fs.existsSync(path.join(__dirname, "Logs"))) {
       await fsPromise.mkdir(path.join(__dirname, "Logs"));
@@ -35,6 +33,5 @@ async function logEvents() {
   }
 }
 
-exports.logEvent = {logEvents}
-
-logEvents();
+// module.exports = logEvents
+exports.logEvent = { logEvents };
