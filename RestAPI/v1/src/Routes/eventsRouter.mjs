@@ -6,14 +6,13 @@ import { fileURLToPath } from "node:url";
 import { checkSchema, matchedData, validationResult } from "express-validator";
 import { valid_schema } from "../Utils/Schema/schema.mjs";
 
-const route = Router()
+const route = Router();
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const events_data = JSON.parse(
-  await fs.readFile(path.join(__dirname, "../src","eventsData.json"))
+  await fs.readFile(path.join(__dirname, "..", "eventsData.json"))
 );
-
 
 const findUser = (req, res, next) => {
   const {
@@ -45,7 +44,6 @@ const findUser = (req, res, next) => {
   next();
 };
 
-// route.use(findId());
 route.use(express.json());
 
 route.get("/", (req, res) => {
@@ -102,5 +100,4 @@ route.delete("/events/:id", findUser, (req, res) => {
   res.send(`Event ${id} deleted successfully`);
 });
 
-
-export default route
+export default route;

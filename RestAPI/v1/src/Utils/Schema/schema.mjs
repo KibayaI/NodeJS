@@ -5,7 +5,7 @@ export const valid_schema = {
     },
     isLength: {
         options : {max: 10},
-        errorMessage: "Url should not be that long nigga"
+        errorMessage: "Url should not be that long"
     }
   },
   title: {
@@ -21,9 +21,6 @@ export const valid_schema = {
   date: {
     notEmpty: {
       errorMessage: "date should not be empty",
-    },
-    isTime: {
-        errorMessage: "Date should be a date"
     }
   },
   location: {
