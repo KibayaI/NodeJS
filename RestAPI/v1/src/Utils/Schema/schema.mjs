@@ -4,7 +4,7 @@ export const valid_schema = {
       errorMessage: "imageUrl should not be empty",
     },
     isLength: {
-        options : {max: 10},
+        options : {max: 100},
         errorMessage: "Url should not be that long"
     }
   },
@@ -15,7 +15,7 @@ export const valid_schema = {
   },
   price: {
     notEmpty: {
-      errorMessage: "imageUrl should not be empty",
+      errorMessage: "price should not be empty",
     }
   },
   date: {
