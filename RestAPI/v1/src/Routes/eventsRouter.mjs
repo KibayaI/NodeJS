@@ -35,8 +35,7 @@ const findUser = (req, res, next) => {
 
   if (get_index === -1) {
     return res.status(404).json({
-      error: "Event does not exist",
-      info: "learn what error 404 is!!!",
+      error: "Event does not exist"
     });
   }
   req.get_index = get_index;
